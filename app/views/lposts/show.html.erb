@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @lpost %>
+<% if Luser.first != current_luser %>
+  <%= render 'lpostulations/postulations' %>
+<% end %>
+
+<% if Luser.first == current_luser %>
+  <div>
+    <%= link_to "Editar", edit_lpost_path(@lpost), class:"my-3 btn btn-secondary" %> 
+    <%= button_to "Eliminar", @lpost, method: :delete, class:"mb-3 btn btn-secondary" %>
+  </div>
+<% end %>
+
+<%= link_to "Volver", lposts_path, class:"btn btn-secondary" %>
+

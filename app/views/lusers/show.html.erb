@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @luser %>
+
+<div>
+  <%= link_to "Volver", lusers_path, class:"btn btn-secondary mt-3" %>
+
+  <%= button_to "Eliminar", @luser, method: :delete, class:"btn btn-danger mt-4" %>
+</div>

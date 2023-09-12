@@ -1,0 +1,7 @@
+<div class="container">
+    <div>
+        <% Lpostulation.kinds.each do |kind| %>
+            <%= button_to "#{kind}", luser_lpostulation_path(lpost_id: @lpost.id, kind: kind), method: :post, class:"btn btn-secondary col-2 mt-2" %>
+        <% end %>
+    </div>
+</div>

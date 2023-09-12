@@ -1,0 +1,12 @@
+<h1><u>Mis Postulaciones</u></h1>
+
+<ul class="mt-4">
+ <% @lpost.each do |lpost| %>
+ <li class="fs-4">
+ <u class="fs-3"><%= lpost.title %></u>
+ <p>
+ <%= link_to "Mostrar esta publicacion", pspost, class:"btn btn-secondary" %>
+</p>
+ </li>
+ <% end %>
+</ul>

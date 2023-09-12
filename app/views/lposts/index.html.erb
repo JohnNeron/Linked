@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ofertas Laborales disponibles</h1>
+
+<div id="lposts">
+  <% @lposts.each do |lpost| %>
+    <%= render lpost %>
+    <p>
+      <%= link_to "Click aqui para ver más detalles de esta oferta", lpost, class:"btn btn-secondary" %>
+    </p>
+  <% end %>
+</div>
+
+<div class=" mb-3 text-center">
+  <% if Luser.first == current_luser %>
+    <%= link_to "Sube una nueva oferta laboral", new_lpost_path, class: "btn btn-danger" %>
+  <% end %>
+</div>

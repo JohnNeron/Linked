@@ -1,0 +1,33 @@
+<%= form_with(model: lpost) do |form| %>
+  <% if lpost.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(lpost.errors.count, "error") %> prohibited this lpost from being saved:</h2>
+
+      <ul>
+        <% lpost.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.text_field :content %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :limages %>
+    <%= form.file_field :limages, multiple: true, class: 'form-control' %>
+  </div>
+
+
+  <div>
+    <%= form.submit "Crear oferta", class:"mt-4"%>
+  </div>
+<% end %>

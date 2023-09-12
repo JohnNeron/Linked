@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+first_post:
+ title: Di First Post
+ content: Description for The First Post
+
+second_post:
+ title: Di Second Post
+ content: Description for The Second Post

@@ -1,0 +1,19 @@
+<div id="<%= dom_id luser %>">
+
+    <div class="card w-75 mb-1">
+        <div class="card-body">
+        <% if luser.avatar.persisted? %>
+            <strong>Foto de Perfil:</strong>
+            <p><%= image_tag luser.avatar, class: "rounded-circle avatarr" %> </p>
+        <% end %>
+
+        <strong>Nombre:</strong>
+        <%= luser.name %>
+        <br>
+        <strong>Apellido:</strong>
+        <%= luser.lastname %>
+        <br>
+        <strong>Edad:</strong>
+        <%= luser.age %>
+    </div>
+</div>

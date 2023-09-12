@@ -1,0 +1,11 @@
+<div id="<%= dom_id lpost %>">
+  <div class="card text-center">
+    <% lpost.limages.each do |limage| %>
+      <%= image_tag limage, class:"card-img-top w-50"%>
+    <% end %>
+    <div class="card-body">
+      <h5 class="card-title"> <%= lpost.title %></h5>
+      <p class="card-text"><%= lpost.content %></p>
+    </div>
+  </div>
+</div>
