@@ -85,6 +85,4 @@ test:
 #
 production:
   <<: *default
-  database: Linked_production
-  username: Linked
-  password: <%= ENV["LINKED_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
